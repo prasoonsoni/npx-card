@@ -25,7 +25,7 @@ const questions = [
             {
                 name: `Send me an ${chalk.green.bold("E-Mail")}?`,
                 value: () => {
-                    open("mailto:contact@prasoon.codes");
+                    open("mailto:contact@prasoonsoni.com");
                     console.log("\nDone, see you soon at inbox.\n");
                 }
             },
@@ -37,7 +37,7 @@ const questions = [
                         text: ' Downloading Resume',
                         spinner: cliSpinners.material,
                     }).start();
-                    let pipe = request('https://prasoon.codes/Resume-PrasoonSoni.pdf').pipe(fs.createWriteStream('./Resume-PrasoonSoni.pdf'));
+                    let pipe = request('https://www.prasoonsoni.com/Resume-PrasoonSoni.pdf').pipe(fs.createWriteStream('./Resume-PrasoonSoni.pdf'));
                     pipe.on("finish", function () {
                         let downloadPath = path.join(process.cwd(), 'Resume-PrasoonSoni.pdf')
                         console.log(`\nResume Downloaded at ${downloadPath} \n`);
@@ -59,13 +59,15 @@ const questions = [
 const data = {
     name: chalk.bold.rgb(59,52,134)("                     PRASOON SONI"),
     handle: chalk.white("@prasoonsoni"),
-    work: `${chalk.white("Upcoming AEH Intern at")} ${chalk
-        .hex("#2b82b2")
-        .bold("Accenture")}`,
+    work: `${chalk.white("Software Engineer")} `
+        // `${chalk
+        // .hex("#2b82b2")
+        // .bold("Accenture")}`
+        ,
     twitter: chalk.gray("https://twitter.com/") + chalk.cyan("prasoonsoni_"),
     github: chalk.gray("https://github.com/") + chalk.green("prasoonsoni"),
     linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue("prasoonsoni"),
-    web: chalk.cyan("https://prasoon.codes"),
+    web: chalk.cyan("https://prasoonsoni.com"),
     npx: chalk.red("npx") + " " + chalk.white("prasoon"),
 
     labelWork: chalk.white.bold("       Work:"),
